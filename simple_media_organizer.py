@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(format='%(asctime)s %(message)s', level = logging.INFO, filename = "log.txt")
 
-#does it overwirte the file if it exists?
+
 #put this in a config file later?
 photo_path = "photo"
 video_path = "video"
@@ -58,6 +58,7 @@ for f in filelist:
             if target.exists():
                 logging.info(f"Removed {source}")
                 source.unlink()
+        ##add extra option here to check filesize if the same exact size then skip else, rename and copy
         else:
             logging.warning(f"File {target} exists, skipping...")
     else:
