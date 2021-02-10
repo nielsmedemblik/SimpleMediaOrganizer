@@ -3,14 +3,17 @@ import datetime
 import shutil
 import logging
 
-logging.basicConfig(format='%(asctime)s %(message)s', level = logging.INFO, filename = "log.txt")
+log_path = Path("../log/")
+if not log_path.exists():
+    log_path.mkdir()
+logging.basicConfig(format='%(asctime)s %(message)s', level = logging.WARNING, filename = Path(log_path,"log.txt"))
 
 
 #put this in a config file later?
 photo_path = "photo"
 video_path = "video"
 img_ext = ['.CR2','.jpg','.jpeg','.png','.tif','.tiff','.tga','.bmp','.exr','.hdr']
-vid_ext = ['.mp4','.mov','.m4v','.avi']
+vid_ext = ['.mp4','.mov','.m4v','.avi', '3gp']
 in_path = Path('//LURCH/homeshare/media/in/').glob('**/*')
 start_path = Path('//LURCH/homeshare/media/')
 
