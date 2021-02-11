@@ -13,7 +13,7 @@ logging.basicConfig(format='%(asctime)s %(message)s', level = logging.WARNING, f
 photo_path = "photo"
 video_path = "video"
 img_ext = ['.CR2','.jpg','.jpeg','.png','.tif','.tiff','.tga','.bmp','.exr','.hdr']
-vid_ext = ['.mp4','.mov','.m4v','.avi', '3gp']
+vid_ext = ['.mp4','.mov','.MOV','.m4v','.avi', '3gp']
 in_path = Path('//LURCH/homeshare/media/in/').glob('**/*')
 start_path = Path('//LURCH/homeshare/media/')
 
